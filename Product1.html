@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Set</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+         function changePage(n){
+    let pages = document.getElementsByClassName("productpage");
+    if (n == 1) {
+pages[1].style.display = "none";
+    } else {
+        pages[0].style.display = "none";
+    }
+    pages[n-1].style.display = "block";
+   }
+    </script>
+</head>
+<body>
+    <div id="navbar">
+      <div id="background1"></div>
+        <a href="home.html"><button id="home">Home</button></a> <!-- use of percentage = for symmetrics-->
+        <a href="aboutus.html"><button id="aboutus2">About Us</button></a>
+        <img id="navbarlogo" src="logo.png" alt="logo not loaded">
+    </div>
+    <img class="productphoto" src="table.jpeg" alt="">
+    <div class="productline1"></div>
+    <h2>Garden Set</h2>
+    <h4>50 USD / 800 000 IDR</h4>
+    <div class="productline2"></div>
+    
+    <div class="productpage">
+        <ul>
+            <li>Includes a wooden table and chair</li>
+            <li>Table dimension and height: 80cm x 80cm x 5cm in<br>width, 80cm in height</li>
+            <li>Chair height: 50cm</li>
+            <li>3 Year warranty included</li>
+            <li>Waterphobic coating included</li>
+        </ul>
+        <button onclick="changePage(2)">PURCHASE</button>
+    </div>
+    <div class="productpage" style="display: none;">
+<b onclick="changePage(1)">B A C K</b>
+<h1>THANK YOU<br>FOR<br>YOUR PURCHASE</h1>
+    </div>
+</body>
+</html>

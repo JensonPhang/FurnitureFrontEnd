@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grey Wool Chair</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+         function changePage(n){
+    let pages = document.getElementsByClassName("productpage");
+    if (n == 1) {
+pages[1].style.display = "none";
+    } else {
+        pages[0].style.display = "none";
+    }
+    pages[n-1].style.display = "block";
+   }
+    </script>
+</head>
+<body>
+    <div id="navbar">
+      <div id="background1"></div>
+        <a href="home.html"><button id="home">Home</button></a> <!-- use of percentage = for symmetrics-->
+        <a href="aboutus.html"><button id="aboutus2">About Us</button></a>
+        <img id="navbarlogo" src="logo.png" alt="logo not loaded">
+    </div>
+    <img class="productphoto" src="chair.jpeg" alt="">
+    <div class="productline1"></div>
+    <h2>Grey Wool Chair</h2>
+    <h4> 210 USD / 3 400 000 IDR</h4>
+    <div class="productline2"></div>
+    
+    <div class="productpage">
+        <ul>
+            <li>Chair height: 60cm</li>
+            <li>Waterphobic coating: spills will be much more<br>managable</li>
+            <li>Mix of soft wool, nylon, and polyester used with<br>soft padding</li>
+            <li>3 Year warranty included</li>
+        </ul>
+        <button onclick="changePage(2)">PURCHASE</button>
+    </div>
+    <div class="productpage" style="display: none;">
+<b onclick="changePage(1)">B A C K</b>
+<h1>THANK YOU<br>FOR<br>YOUR PURCHASE</h1>
+    </div>
+</body>
+</html>

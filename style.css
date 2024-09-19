@@ -1,0 +1,537 @@
+ #navbar {
+     margin: -10px;
+     position: fixed;
+     top: 0;
+ }
+
+ #background0 {
+     background-color: rgb(35, 35, 35);
+     width: 100%;
+     height: 65px;
+     position: fixed;
+     top: 0;
+     z-index: -1;
+     opacity: 0.05;
+     transition: 0.5s;
+ }
+
+ #background1 {
+     background-color: rgb(35, 35, 35);
+     width: 100%;
+     height: 65px;
+     position: fixed;
+     top: 0;
+     z-index: -1;
+     transition: 0.5s;
+ }
+
+ #aboutus {
+     position: absolute;
+     left: 1120px;
+     top: 2px;
+     width: 120%;
+ }
+
+ #aboutus2 {
+     position: absolute;
+     left: 1290px;
+     top: 2px;
+     width: 120%;
+ }
+
+ #navbarlogo {
+     width: 100px;
+     position: absolute;
+     top: -7px;
+     left: 690px;
+     transition: 0.5s;
+ }
+
+ #navbarlogo:hover {
+     width: 116px;
+     top: -15px;
+     left: 682px;
+ }
+
+ .homepage {
+     background-color: rgb(33, 33, 33);
+     width: 100%;
+     height: 4000px;
+     position: absolute;
+     top: 0;
+     z-index: -1;
+     margin: -10px;
+ }
+
+ #navbar button {
+     color: white;
+     margin-top: 8px;
+     font-size: 20px;
+     padding: 20px 100px;
+     background-color: rgba(0, 0, 0, 0);
+     border: none;
+     font-weight: 700;
+     transition: 0.5s;
+     border-radius: 20px;
+ }
+
+ #navbar button:hover {
+     font-size: 22px;
+     padding: 17.5px 97.2px;
+     color: rgb(199, 199, 199);
+     cursor: pointer;
+ }
+
+ .background {
+     user-select: none;
+ }
+
+ .background img {
+     width: 100%;
+ }
+
+ .background b {
+     color: white;
+     z-index: 2;
+     font-size: 80px;
+     position: absolute;
+     top: 300px;
+     left: 100px;
+     font-weight: 800;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     -webkit-text-stroke-width: 2px;
+     -webkit-text-stroke-color: rgba(0, 0, 0, 0.4);
+     animation: intopage 0.7s;
+ }
+
+ @keyframes intopage {
+     from {
+         opacity: .4;
+         width: 80%;
+         top: 200px;
+         left: 800px;
+         font-size: 30px;
+     }
+
+     to {
+         opacity: 1;
+         top: 300px;
+         left: 100px;
+         font-size: 80px;
+     }
+ }
+
+
+ .fade {
+     animation-name: fade;
+     animation-duration: 1s;
+ }
+
+ @keyframes fade {
+     from {
+         opacity: .4;
+         width: 80%;
+         margin-left: 10%;
+         margin-top: 80px;
+     }
+
+     to {
+         opacity: 1;
+         width: 100%;
+         margin-left: 0;
+         margin-top: 0;
+     }
+ }
+
+ .sliderbuttons1 {
+     position: absolute;
+     top: 650px;
+     left: 1200px;
+     font-size: 20px;
+     color: white;
+     user-select: none;
+ }
+
+ .sliderbuttons1 b {
+     transition: 0.5s;
+     text-decoration: underline;
+ }
+
+ .sliderbuttons1 b:hover {
+     cursor: pointer;
+     color: #dadada;
+ }
+
+ .sliderbuttons2 {
+     position: absolute;
+     top: 680px;
+     left: 1229px;
+     z-index: 1;
+ }
+
+ .sliderbuttons2numbers {
+     position: absolute;
+     top: 677.5px;
+     left: 1229px;
+ }
+
+ .sliderbuttons2numbers button {
+     background-color: rgba(0, 0, 0, 0);
+     color: white;
+     z-index: 0;
+     padding: 0 4.25px;
+     border-color: rgba(0, 0, 0, 0);
+     text-decoration: underline;
+
+ }
+
+ .dot {
+     cursor: pointer;
+     height: 15px;
+     width: 15px;
+     margin: 0 2px;
+     background-color: #bbb;
+     border-radius: 50%;
+     display: inline-block;
+     transition: background-color 0.4s ease;
+ }
+
+ .active {
+     background-color: rgba(255, 255, 255, 0);
+ }
+
+ .pagepart2 {
+     background-color: rgb(244, 248, 255);
+     height: 855px;
+     width: 100%;
+     position: absolute;
+     top: 855px;
+ }
+
+ .pagepart2 video {
+     position: absolute;
+     top: 120px;
+     left: 159px;
+ }
+
+ .pagepart2 b {
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 45px;
+     position: absolute;
+     left: 285px;
+     top: 25px;
+ }
+
+ .pagepart3 {
+     background-color: rgb(254, 255, 240);
+     height: 855px;
+     width: 100%;
+     position: absolute;
+     top: 1710px;
+ }
+
+ .titlepart3 {
+     font-size: 75px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     position: relative;
+     left: 50px;
+     top: 20px;
+ }
+
+ .paragraphpart3 {
+     font-size: 36px;
+     font-family: Georgia;
+     margin-left: 50px;
+     margin-right: 700px;
+     text-align: justify;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ .sliderpart3 {
+     width: 630px;
+     height: 400px;
+     position: absolute;
+     top: 240px;
+     left: 880px;
+     overflow: hidden;
+ }
+
+ .left {
+     position: absolute;
+     top: 25%;
+     width: 20%;
+     opacity: 0.5;
+     animation: centerleft 0.25s;
+ }
+
+ @keyframes centerleft {
+     from {
+         width: 50%;
+         left: 25%;
+         opacity: 1;
+         top: 0;
+     }
+
+     to {
+         width: 20%;
+         top: 25%;
+         left: 0;
+         opacity: 0.5;
+     }
+ }
+
+ .center {
+     width: 50%;
+     position: absolute;
+     top: 0;
+     left: 25%;
+     animation: rightcenter 0.25s;
+
+ }
+
+ @keyframes rightcenter {
+     from {
+         width: 25%;
+         top: 25%;
+         left: 80%;
+         opacity: 0.5;
+     }
+
+     to {
+         width: 50%;
+         left: 25%;
+         opacity: 1;
+         top: 0;
+     }
+ }
+
+ .right {
+     width: 20%;
+     position: absolute;
+     top: 25%;
+     right: 0;
+     opacity: 0.5;
+     animation: appear 0.25s;
+ }
+
+ @keyframes appear {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 0.5;
+     }
+ }
+
+
+
+ .not {
+     display: none;
+ }
+
+
+ .pagepart4 {
+     background-color: rgb(245, 245, 245);
+     height: 1500px;
+     width: 100%;
+     position: absolute;
+     top: 2565px;
+ }
+
+ .product1 img,
+ .product2 img,
+ .product3 img,
+ .product4 img,
+ .product5 img,
+ .product6 img {
+     width: 370px;
+     z-index: 1;
+ }
+
+ .product1 {
+     position: absolute;
+     top: 200px;
+     left: 6.25%;
+ }
+
+ .product2 {
+     position: absolute;
+     top: 200px;
+     left: 37.5%;
+ }
+
+ .product3 {
+     position: absolute;
+     top: 200px;
+     left: 68.75%;
+ }
+
+ .product4 {
+     position: absolute;
+     top: 675px;
+     left: 6.25%;
+ }
+
+ .product5 {
+     position: absolute;
+     top: 675px;
+     left: 37.5%;
+ }
+
+ .product6 {
+     position: absolute;
+     top: 675px;
+     left: 68.75%;
+ }
+
+ .clickablebox {
+     position: absolute;
+     top: 0;
+     cursor: pointer;
+     width: 370px;
+     height: 370px;
+     z-index: 2;
+     transition: opacity 0.5s;
+     opacity: 0;
+ }
+
+ .clickablebox:hover {
+     opacity: 1;
+ }
+
+ .textbox {
+     background-color: rgba(50, 50, 50, 0.75);
+     width: 370px;
+     height: 140px;
+     position: absolute;
+     bottom: 0;
+ }
+
+ .titleinbox {
+     font-size: 30px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin-left: 10px;
+     color: white;
+ }
+
+ .descriptioninbox {
+     font-size: 15px;
+     margin-top: -3px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin-left: 11px;
+     color: white;
+ }
+
+ .titlepart4 {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size: 65px;
+     text-align: center;
+     font-weight: 700;
+     margin-top: 50px;
+ }
+
+ table {
+     border-collapse: collapse;
+     position: absolute;
+     top: 1200px;
+     left: 355px;
+     font-size: 28px;
+ }
+
+ .productphoto {
+     width: 400px;
+     position: absolute;
+     top: 175px;
+     left: 325px;
+ }
+
+ h2 {
+     font-family: Arial, Helvetica, sans-serif;
+     color: rgb(0, 110, 110);
+     font-size: 45px;
+     position: absolute;
+     top: 140px;
+     left: 760px;
+ }
+
+ h4 {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: rgb(255, 136, 0);
+     font-size: 20px;
+     position: absolute;
+     top: 200px;
+     left: 760px;
+ }
+
+ .productline1 {
+     height: 2px;
+     width: 400px;
+     position: absolute;
+     top: 590px;
+     left: 325px;
+     background-color: rgb(40, 199, 146);
+ }
+
+ .productline2 {
+     height: 2px;
+     width: 430px;
+     position: absolute;
+     top: 260px;
+     left: 760px;
+     background-color: rgb(40, 199, 146);
+ }
+
+ .productpage {
+     position: absolute;
+     top: 260px;
+     left: 760px;
+ }
+
+ ul {
+     position: relative;
+     left: -24px;
+     font-weight: 600;
+     font-size: 18px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .productpage button {
+     position: absolute;
+     top: 258px;
+     padding: 15px 121px;
+     font-size: 30px;
+     font-weight: 800;
+     color: white;
+     background-color: rgb(70, 237, 181);
+     border: 2px solid rgb(46, 232, 170);
+
+ }
+
+ .productpage button:hover {
+     cursor: pointer;
+     background-color: rgb(46, 232, 170);
+     color: rgb(245, 245, 245);
+ }
+
+ .productpage b {
+     color: rgb(46, 232, 170);
+     font-size: 25px;
+     position: relative;
+     top: 10px;
+     font-family: Arial, Helvetica, sans-serif;
+     user-select: none;
+ }
+
+ .productpage b:hover {
+     color: rgb(36, 190, 139);
+     cursor: pointer;
+ }
+
+ h1 {
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+     position: relative;
+     top: 20px;
+     left: 70px;
+ }

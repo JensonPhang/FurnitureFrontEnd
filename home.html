@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link rel="icon" href="logo.png" />
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 500 ||
+          document.documentElement.scrollTop > 500
+        ) {
+          document.getElementById("background0").style.opacity = "1";
+        } else {
+          document.getElementById("background0").style.opacity = "0.05";
+        }
+      }
+      let slideIndex = 1;
+      function changeSlide(n) {
+        showSlide((slideIndex += n));
+      }
+      function currentSlide(n) {
+        showSlide((slideIndex = n));
+      }
+      function showSlide(n) {
+        let slides = document.getElementsByClassName("background");
+        let dots = document.getElementsByClassName("dot");
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = "dot";
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className = "dot active";
+      }
+      
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="background0"></div>
+      <a href="#homepage"><button id="home">Home</button></a>
+      <!-- use of percentage = for symmetrics-->
+      <a href="#pagepart4"><button id="gallery">Gallery</button></a>
+      <!--  use of pixel for exact measurements-->
+      <a href="aboutus.html"><button id="aboutus">About Us</button></a>
+      <img id="navbarlogo" src="logo.png" alt="logo not loaded" />
+    </div>
+    <div class="homepage" id="homepage">
+      <div class="pagepart1">
+        <div class="background fade">
+          <img class="imagepart1" src="furniturebackground1.jpg" alt="" />
+          <b>RELAXED MINIMALISTIC</b>
+        </div>
+        <div class="background fade" style="display: none">
+          <b>COZY MODERN</b>
+          <img class="imagepart1" src="furniturebackground2.png" alt="" />
+        </div>
+        <div class="background fade" style="display: none">
+          <b>WARM TONED</b>
+          <img class="imagepart1" src="furniturebackground3.jpg" alt="" />
+        </div>
+        <div class="sliderbuttons1">
+          <b onclick="changeSlide(-1)">PREV</b> |
+          <b onclick="changeSlide(1)">NEXT</b>
+        </div>
+        <div class="sliderbuttons2" style="text-align: center">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="sliderbuttons2numbers">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+        </div>
+      </div>
+      <div class="pagepart2">
+        <b class="titlepart2">A GLIMPSE OF MODERN LUXURIOUS</b>
+        <video width="1200" height="675" autoplay loop>
+          <source src="furniturevideo1.mp4" type="video/mp4" />
+          Error: Video tag is not supported
+        </video>
+      </div>
+      <div class="pagepart3">
+        <b class="titlepart3">Why VENI VIDI VICI?</b>
+        <p class="paragraphpart3">
+          Discover the essence of luxury and elegance with VENI VIDI VICI, where
+          every piece of furniture is a masterpiece. Our exquisite collection
+          combines timeless design with unparalleled craftsmanship, transforming
+          any space into a haven of sophistication and comfort. From sumptuous
+          sofas to meticulously crafted dining sets, VENI VIDI VICI offers the
+          perfect blend of style and functionality, ensuring that your home not
+          only looks stunning but also feels uniquely yours. Experience the art
+          of living well with VENI VIDI VICI, where your dream interiors come to
+          life.
+        </p>
+        <div class="sliderpart3">
+          <img class="imageslider left" src="table.jpeg" alt="" />
+          <img class="imageslider center" src="chair.jpeg" alt="" />
+          <img class="imageslider right" src="lamp.jpeg" alt="" />
+          <img class="imageslider not" src="bedroomdecor.jpeg" alt="" />
+          <img class="imageslider not" src="builtinclosetset.jpeg" alt="" />
+          <img class="imageslider not" src="wardrobe.jpeg" alt="" />
+          <script>
+            let imageIndex = 1;
+            showImages();
+
+            function showImages() {
+              let images = document.getElementsByClassName("imageslider");
+              if (imageIndex > images.length) {
+                imageIndex = 1;
+              }
+              for (i = 0; i < images.length; i++) {
+                images[i].className = "imageslider not";
+              }
+              if (imageIndex == 1) {
+                images[images.length - 1].className = "imageslider left";
+                images[0].className = "imageslider center";
+                images[1].className = "imageslider right";
+              } else if (imageIndex == images.length) {
+                images[imageIndex - 2].className = "imageslider left";
+                images[imageIndex - 1].className = "imageslider center";
+                images[0].className = "imageslider right";
+              } else {
+                images[imageIndex - 2].className = "imageslider left";
+                images[imageIndex - 1].className = "imageslider center";
+                images[imageIndex].className = "imageslider right";
+              }
+              imageIndex++;
+              setTimeout(showImages, 1500);
+            }
+          </script>
+        </div>
+      </div>
+      <div class="pagepart4" id="pagepart4">
+        <div class="titlepart4">OUR MOST RECENT COLLECTION</div>
+        <div class="product1">
+          <img src="table.jpeg" alt="" />
+          <a href="Product1.html"
+            ><div class="clickablebox">
+              <div class="textbox">
+                <b class="titleinbox">Garden Set</b>
+                <p class="descriptioninbox">
+                  Includes a wooden table and chair, along with a white ceramic
+                  pot and vase, perfect for outdoor vibes, especially when
+                  hanging out with our loved ones.
+                </p>
+              </div>
+            </div></a
+          >
+        </div>
+        <div class="product2">
+          <img src="chair.jpeg" alt="" />
+          <a href="Product2.html"
+            ><div class="clickablebox">
+              <div class="textbox">
+                <b class="titleinbox">Grey Wool Chair</b>
+                <p class="descriptioninbox">
+                  This chair is made with high-quality fabric along with being
+                  equipped with elite padding, giving a nice perspective on both
+                  comfort and looks.
+                </p>
+              </div>
+            </div></a
+          >
+        </div>
+        <div class="product3">
+          <img src="lamp.jpeg" alt="" />
+          <a href="Product3.html"
+            ><div class="clickablebox">
+              <div class="textbox">
+                <b class="titleinbox">Titanium Lamp</b>
+                <p class="descriptioninbox">
+                  Lamp is made out of titanium and other premium materials
+                  allowing it to strengthen the luxurious vibe a room can have.
+                </p>
+              </div>
+            </div></a
+          >
+        </div>
+        <div class="product4">
+          <img src="bedroomdecor.jpeg" alt="" />
+          <a href="Product4.html"
+            ><div class="clickablebox">
+              <div class="textbox">
+                <b class="titleinbox">Decoration Set</b>
+                <p class="descriptioninbox">
+                  Includes two different white ceramic pots, along with a lamp,
+                  an LED chandelier, and a table cupboard. Completely made out
+                  of premium materials and hand-crafted with precision, perfect
+                  for extra storage space in an empty spot of the room.
+                </p>
+              </div>
+            </div></a
+          >
+        </div>
+        <div class="product5">
+          <img src="builtinclosetset.jpeg" alt="" />
+          <a href="Product5.html"
+            ><div class="clickablebox">
+              <div class="textbox">
+                <b class="titleinbox">Integrated Storage Set</b>
+                <p class="descriptioninbox">
+                  Built in as part of your walls, provides a majestic look
+                  inside your room.
+                </p>
+              </div>
+            </div></a
+          >
+        </div>
+        <div class="product6">
+          <img src="wardrobe.jpeg" alt="" />
+          <a href="Product6.html"
+            ><div class="clickablebox">
+              <div class="textbox">
+                <b class="titleinbox">Single Wardrobe</b>
+                <p class="descriptioninbox">
+                  This single wardrobe is not only functionally perfect, but can
+                  also add an abstract perspective inside your room.
+                </p>
+              </div>
+            </div></a
+          >
+        </div>
+        <table border="1" width="800px">
+          <tr>
+            <th>Product</th>
+            <th>Price in IDR</th>
+          </tr>
+          <tr>
+            <td>Garden Set</td>
+            <td>800000</td>
+          </tr>
+          <tr>
+            <td>Grey Wool Chair</td>
+            <td>3400000</td>
+          </tr>
+          <tr>
+            <td>Titanium Lamp</td>
+            <td>1200000</td>
+          </tr>
+          <tr>
+            <td>Decoration Set</td>
+            <td>22000000</td>
+          </tr>
+          <tr>
+            <td>Integrated Storage Set</td>
+            <td>38000000</td>
+          </tr>
+          <tr>
+            <td>Single Wardrobe</td>
+            <td>6700000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
